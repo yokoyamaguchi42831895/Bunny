@@ -1,0 +1,738 @@
+@charset "UTF-8";
+
+$pc: 1024px; // PC
+$tab: 780px; // タブレット
+$sp: 480px;  // スマホ
+
+@mixin pc {
+    @media (max-width: ($pc)) {
+        @content;
+    }
+}
+@mixin tab {
+    @media (max-width: ($tab)) {
+        @content;
+    }
+}
+@mixin sp {
+    @media (max-width: ($sp)) {
+        @content;
+    }
+}
+$color1: #333333;
+$color2: #EC84A0;
+$color3: #FFFFFF;
+$color4: #aaa;
+$color5: #EC9C84;
+$color6: #707070;
+$color7: #C6C6C6;
+
+
+/*========= base ===========*/
+*, 
+*:before, 
+*:after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", sans-serif;
+    color: $color1;
+    line-height: 1.5;
+}
+img {
+    width: 100%;
+    vertical-align: bottom;
+}
+ul, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: $color1;
+    &:hover {
+        opacity: .8;
+    }
+}
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @include sp {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+}
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+.title {
+    padding-bottom: 30px;
+    margin-bottom: 60px;
+    background: transparent url(../img/h-bottom.png) no-repeat bottom center/300px auto;
+    @include sp {
+        font-size: 26px;
+        background: transparent url(../img/h-bottom.png) no-repeat bottom center/250px auto;
+    }
+}
+/* 共通インナー */
+.inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    overflow: hidden;
+    @include sp {
+        padding: 0 4%;
+    }
+}
+
+/* header */
+#header {
+    padding: 15px 0;
+    width: 100%;
+    @include sp {
+        padding: 0;
+    }
+    .inner {
+        display: flex;
+        @include sp {
+            padding: 4%;
+        }
+    }
+    .header-left {
+        margin-right: auto;
+    }
+    .header-title img {
+        width: 160px;
+        height: 60px;
+        @include sp {
+            width: 100px;
+            height: 38px;
+        }
+    }
+    .header-right {
+        line-height: 60px;
+        margin-right: 10px;
+        @include sp {
+            line-height: 38px;
+        }
+        .header-btn {
+            background-color: $color2;
+            padding: 13px 30px;
+            border-radius: 28px;
+            color: $color3;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 3px 3px 10px $color4;
+            @include sp {
+                padding: 11px 24px;
+            }
+        }
+    }
+}
+/* fv */
+.fv {
+    background-image: url(../img/bg.png);
+    height: 595px;
+    @include sp {
+        height: auto;
+        padding-bottom: 70px;
+    }
+    .inner {
+        display: flex;
+        @include sp {
+            display: block;
+        }
+    }
+    .fv-left {
+        padding-top: 180px;
+        @include sp {
+            padding-top: 60px;
+        }
+    }
+    .sp-fv {
+        display: none;
+        @include sp {
+            display: block;
+            background-image: url(../img/mv.png);
+            width: 345px;
+            height: 198px;
+            background-size: cover;
+            margin-bottom: 60px;
+        }
+    }
+    .fv-title {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 40px;
+        @include sp {
+            font-size: 28px;
+            text-align: center;
+        }
+    }
+    p {
+        font-size: 16px;
+        width: 400px;
+        margin-bottom: 40px;
+        @include sp {
+            width: 100%;
+        }
+    }
+    .fv-btn {
+        display: flex;
+        @include sp {
+            display: block;
+            text-align: center;
+        }
+    }
+    li {
+        @include sp {
+            height: 62px;
+        }
+    }
+    .left-btn {
+        background-color: $color2;
+        padding: 15px 25px;
+        border-radius: 28px;
+        color: $color3;
+        font-size: 18px;
+        font-weight: bold;
+        box-shadow: 3px 3px 10px $color4;
+        margin-right: 10px;
+        @include sp {
+            padding: 15px 30px;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+    }
+    .right-btn {
+        background-color: $color3;
+        padding: 15px 25px;
+        border-radius: 28px;
+        color: $color2;
+        font-size: 18px;
+        font-weight: bold;
+        box-shadow: 3px 3px 10px $color4;
+        @include sp {
+            padding: 15px 30px;
+        }
+    }
+    .fv-right {
+        background: transparent url('../img/mv.png') 0% 0% no-repeat padding-box;
+        background-size: contain;
+        width: 600px;
+        height: 345px;
+        margin-left: auto;
+        margin-top: 120px;
+        @include sp {
+            display: none;
+        }
+    }
+}
+/* modal */
+.remodal {
+    .modal-image img {
+        height: 300px;
+        object-fit: cover;
+    }
+    .remodal-confirm {
+        background-color: $color2;
+        padding: 5px 25px;
+        border-radius: 28px;
+        color: $color3;
+        font-size: 18px;
+        font-weight: bold;
+        box-shadow: 3px 3px 10px $color4;
+    }
+    h1 {
+        font-size: 28px;
+        margin-top: 20px;
+        position: relative;
+        padding: 0.25em 0;
+        &:after {
+            content: "";
+            display: block;
+            height: 4px;
+            max-width: 350px;
+            margin: auto;
+            background: -webkit-linear-gradient(to right, $color2, $color5);
+            background: linear-gradient(to right, $color2, $color5);
+        }
+    }
+    p {
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+
+/* feature */
+#feature {
+    .feature-block {
+        display: flex;
+        justify-content: space-between;
+        @include sp {
+            display: block;
+        }
+    }
+    .feature-item {
+        &:hover {
+            transform: translateY(-10px);
+            transition-duration: .5s;
+        }
+    }
+    .feature-item:nth-child(1) {
+        margin-left: 70px;
+        @include sp {
+            margin-left: 0;
+        }
+    }
+    .feature-item:nth-child(3) {
+        margin-right: 70px;
+        @include sp {
+            margin-right: 0;
+        }
+    }
+    .feature-image {
+        width: 260px;
+        height: 250px;
+        background-size: cover;
+        @include sp {
+            width: 250px;
+            height: 238px;
+            margin: 0 auto;
+        }
+    }
+    .feature-item:nth-child(1) .feature-image {
+        background-image: url(../img/p-1.png);
+    }
+    .feature-item:nth-child(2) .feature-image {
+        background-image: url(../img/p-2.png);
+    }
+    .feature-item:nth-child(3) .feature-image {
+        background-image: url(../img/p-3.png);
+    }
+    .feature-text {
+        text-align: center;
+        margin-top: 20px;
+        @include sp {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+/* lovely */
+#lovely {
+    background-image: url(../img/bg.png);
+    .section-title {
+        margin-bottom: 100px;
+        @include sp {
+            margin-bottom: 60px;
+        }
+    }
+    .lovely-block {
+        padding-right: 30px;
+        padding-left: 30px;
+        @include sp {
+            width: 100%;
+            height: auto;
+            padding: 0;
+        }
+    }
+    .lovely-item {
+        background-color: $color3;
+        display: flex;
+        height: 300px;
+        max-width: 1025px;
+        @include sp {
+            display: block;
+            height: auto;
+        }
+    }
+    .lovely-item:nth-child(even) {/* 偶数だけ */
+        flex-direction: row-reverse;
+    }
+    .lovely-item:nth-child(2) {
+        margin: 125px 0;
+        @include sp {
+            margin: 50px 0;
+        }
+    }
+    .lovely-image {
+        width: 450px;
+        height: 300px;
+        background-size: cover;
+        box-shadow: 4px 4px 20px $color4;
+        @include sp {
+            width: 90%;
+        }
+    }
+    h3 {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+    p {
+        width: 450px;
+        @include sp {
+            width: 100%;
+        }
+    }
+    .lovely-text {
+        @include sp {
+            padding: 0 15px 25px 15px;
+        }
+    }
+    .lovely-item:nth-child(1) .lovely-image {
+        background-image: url(../img/about-1.jpg);
+        position: relative;
+        top: -30px;
+        left: -50px;
+        margin-right: 20px;
+        @include sp {
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-position: center;
+        }
+    } 
+    .lovely-item:nth-child(2) .lovely-image {
+        background-image: url(../img/about-2.jpg);
+        position: relative;
+        top: -30px;
+        right: -30px;
+        margin-left: 45px;
+        @include sp {
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-position: center;
+            margin-left: 0;
+        }
+    } 
+    .lovely-item:nth-child(3) .lovely-image {
+        background-image: url(../img/about-3.jpg);
+        position: relative;
+        top: -30px;
+        left: -30px;
+        margin-right: 20px;
+        @include sp {
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-position: left;
+        }
+    } 
+    .lovely-item:nth-child(3) .lovely-text {
+        margin-left: 20px;
+        @include sp {
+            margin-left: 0;
+        }
+    }
+}
+
+/* info */
+#info {
+    .info-block {
+        display: flex;
+        justify-content: space-around;
+        @include sp {
+            height: auto;
+            width: 90%;
+            display: block;
+            margin: auto;
+        }
+    }
+    .info-item {
+        width: 320px;
+        padding: 12px 10px 0 10px;
+        box-shadow: 4px 4px 20px $color4;
+        @include sp {
+            margin-bottom: 40px;
+            width: 100%;
+            height: auto;
+        }
+        &:hover {
+            transform: translateY(-10px);
+            transition-duration: .5s;
+        }
+    }
+    .info-item:nth-child(3) {
+        height: 257px;
+        @include sp {
+            height: auto;
+            margin-bottom: 25px;
+        }
+    }
+    .info-image {
+        width: 300px;
+        height: 168px;
+        background-size: cover;
+        position: relative;
+        @include sp {
+            width: 100%;
+            height: 200px;
+            background-position: center;
+        }
+    }
+    .info-item:nth-child(1) .info-image {
+        background-image: url(../img/news-1.jpg);
+    }
+    .info-item:nth-child(2) .info-image {
+        background-image: url(../img/news-2.jpg);
+    }
+    .info-item:nth-child(3) .info-image {
+        background-image: url(../img/news-3.jpg);
+    }
+    .category {
+        position: absolute;
+        right: 0;
+        background-color: $color5;
+        color: $color3;
+        font-size: 14px;
+        padding: 3px 11px 3px 14px;
+    }
+    .info-text {
+        padding: 15px 10px 20px 10px;
+    }
+    time {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    h3 {
+        font-weight: bold;
+    }
+    .info-btn {
+        text-align: center;
+        margin-top: 50px;
+        height: 50px;
+        @include sp {
+            display: none;
+        }
+    }
+    .btn {
+        background-color: $color2;
+        padding: 15px 30px;
+        color: $color3;
+        font-size: 18px;
+        border-radius: 28px;
+        box-shadow: 3px 3px 10px $color4;
+    }
+}
+/* pickup */
+#pickup {
+    background-image: url(../img/bg.png);
+    /* 前ページ、次ページボタン共通のスタイル */
+    .swiper-button-prev,
+    .swiper-button-next {
+        background-image: none; /* デフォルトのボタン画像を消す */
+        width: 28px; /* ボタンの幅 */
+        height: 86px; /* ボタンの高さ */
+        margin-top: -43px; /* 縦中央配置用：ボタンの高さの半分のネガティブマージン（top:50%がすでに設定されている） */
+    }
+    /* 前ページボタンのスタイル */
+    .swiper-button-prev:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f359"; /* angle-double-leftのUnicode */
+        font-size: 48px;
+        color: $color3;
+        -webkit-text-stroke: 1px $color2;
+        position: relative;
+        top: 60px;
+    }
+    /* 次ページボタンのスタイル */
+    .swiper-button-next:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f35a"; /* angle-double-rightのUnicode */
+        font-size: 48px;
+        color: $color3;
+        -webkit-text-stroke: 1px $color2;
+        position: relative;
+        top: 60px;
+        right: 15px;
+    }
+    .swiper-container {
+        max-width: 900px;
+    }
+    .swiper-slide img {
+        width: 300px;
+        height: 200px;
+        @include sp {
+            width: 100%;
+        }
+    }
+}
+
+/* contact */
+#contact {
+    .contact {
+        width: 500px;
+        margin: auto;
+        @include sp {
+            width: 90%;
+            height: auto;
+        }
+    }
+    .item{
+        margin-bottom: 47px;
+        @include sp {
+            width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    label {
+        font-size: 18px;
+        font-weight: bold;
+        width: 200px;
+    }
+    .pseudo-element {
+        float: left;
+        @include sp {
+            float: none;
+        }
+        &:after {
+            content:"必須";
+            font-size: 12px;
+            font-weight: bold;
+            padding: 3px 8px;
+            color:$color3;
+            background-color: $color2;
+            margin-left: 10px;
+        }
+    }
+    .massage {
+        vertical-align: top;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        height: 28px;
+        @include sp {
+            height: 35px;
+        }
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        border: 1px solid $color6;
+        border-radius: 5px;
+        font-size: 1rem;
+        width: 290px;
+        @include sp {
+            width: 100%;
+            margin-top: 10px;
+        }
+    }
+    textarea {
+        height: 100px;
+        margin-left: 50px;
+        @include sp {
+            margin-left: 0;
+        }
+    }
+    .contact-btn {
+        text-align: center;
+        height: 50px;
+        margin-top: 55px;
+    }
+    .btn {
+        background-color: $color2;
+        color: $color3;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 15px 57px;
+        border-radius: 28px;
+        box-shadow: 3px 3px 10px $color4;
+    }
+}
+/* floating */
+.floating {
+    position: fixed;
+    right: 20px;
+    bottom: 5px;
+    display: none;
+    background-image: url(../img/ウサギのシルエット.png);
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 100px;
+    background-size: contain;
+    color: $color5;
+    z-index: 99;
+    &:hover {
+        opacity: .7;
+    }
+    a {
+        display: block;
+        position: relative;
+        top: 40px;
+        left: 23px;
+        color: $color3;
+        font-weight: bold;
+    }
+}
+
+/* footer */
+.page-footer {
+    background-color: $color7;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 16px;
+    .footer-logo img {
+        width: 200px;
+        margin-bottom: 30px;
+        @include sp {
+            width: 100px;
+        }
+    }
+    .nav-item{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        @include sp {
+            display: block;
+        }
+    }
+    li {
+        margin-right: 22px;
+        color: $color3;
+        font-size: 14px;
+        @include sp {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+        
+    }
+    li:nth-child(2),
+    li:nth-child(3) {
+        padding-left: 22px;
+        border-left: 1px solid $color3;
+        @include sp {
+            padding-left: 0;
+        }
+    }
+    li:nth-child(4) {
+        padding-left: 22px;
+        border-left: 1px solid $color3;
+        margin-right: 0;
+        @include sp {
+            padding-left: 0;
+        }
+    }
+    .copyright {
+        font-size: 14px;
+        color: $color3;
+    }
+}
