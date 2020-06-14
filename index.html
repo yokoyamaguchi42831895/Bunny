@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bunny!</title>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css?ver=5.8.2">
+
+    <!-- remodal -->
+    <link rel="stylesheet" href="./css/remodal.css">
+    <link rel="stylesheet" href="./css/remodal-default-theme.css">
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <!-- リセットCSS -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- header -->
+    <header id="header">
+        <div class="inner">
+            <div class="header-left">
+                <h1 class="header-title"><a href="#"><img src="./img/logo.png" alt="Bunny!のロゴ"></a></h1>
+            </div>
+            <div class="header-right">
+                <a href="#contact" class="header-btn">お問い合わせ</a>
+            </div>
+        </div><!-- //inner -->
+    </header><!-- //header -->
+
+    <main>
+        <!-- fv -->
+        <div class="fv">
+            <div class="inner">
+                <div class="fv-left">
+                    <div class="sp-fv"></div>
+                    <h2 class="fv-title">かわいいのは、うさぎ。</h2>
+                    <p>うさぎは世界で一番かわいい動物です。どうしてこんなにかわいいのでしょうか？今回はうさぎに癒されながらサイトを作っていきましょう。</p>
+                    <ul class="fv-btn">
+                        <li><a href="#modal" class="btn left-btn">うさぎとは？</a></li>
+                        <li><a href="#modal2" class="btn right-btn">うさぎのかわいさの秘密</a></li>
+                    </ul>
+                </div><!-- //fv-left -->
+
+                <!-- remodal -->
+                <div class="remodal" data-remodal-id="modal">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <div class="modal-image"><img src="./img/modal1.jpg" alt="ウサギの画像"></div>
+                    <h1>うさぎとは？</h1>
+                    <p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
+                    <br>
+                    <button data-remodal-action="confirm" class="remodal-confirm">閉じる</button>
+                </div><!-- //remodal -->
+                <!-- remodal2 -->
+                <div class="remodal" data-remodal-id="modal2">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <div class="modal-image"><img src="./img/modal2.jpg" alt="ウサギの画像"></div>
+                    <h1>うさぎのかわいさの秘密</h1>
+                    <p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。</p>
+                    <br>
+                    <button data-remodal-action="confirm" class="remodal-confirm">閉じる</button>
+                </div><!-- //remodal -->
+                <!-- remodal -->
+                <div class="remodal" data-remodal-id="modal">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h1>モーダルのタイトル</h1>
+                    <p>モーダルの本文</p>
+                    <br>
+                    <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+                    <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+                </div><!-- //remodal -->
+
+                <div class="fv-right"></div>
+            </div><!-- //inner -->
+        </div><!-- //fv -->
+
+        <!-- feature -->
+        <section class="section" id="feature">
+            <div class="inner">
+                <div class="section-title">
+                    <h2 class="title">うさぎの特徴</h2>
+                </div>
+                <div class="feature-block">
+                    <a href="#" class="feature-item">
+                        <div class="feature-image"></div>
+                        <p class="feature-text">兎来い兎来い<br>赤いぞんぞ買つてやろ</p>
+                    </a>
+                    <a href="#" class="feature-item">
+                        <div class="feature-image"></div>
+                        <p class="feature-text">兎来い兎来い<br>赤いぞんぞ買つてやろ</p>
+                    </a>
+                    <a href="#" class="feature-item">
+                        <div class="feature-image"></div>
+                        <p class="feature-text">兎来い兎来い<br>ぴよんこぴよんこはねて来い</p>
+                    </a>
+                </div><!-- //feature-block -->
+            </div><!-- //inner -->
+        </section><!-- //feature -->
+
+        <!-- lovely -->
+        <section class="section" id="lovely">
+            <div class="inner">
+                <div class="section-title">
+                    <h2 class="title">うさぎのかわいさ</h2>
+                </div>
+                <div class="lovely-block">
+                    <div class="lovely-item">
+                        <div class="lovely-image"></div>
+                        <div class="lovely-text">
+                            <h3>と、『兎来いの唄』をうたつて遊んでをりますと、</h3>
+                            <p>『今日は、今日は』と云つて一疋の子兎が来ました。『まアお前は子兎ね』とつね子さんが云ひますと、『さうです。わたしは子兎ですよ。あなたのお唄が聞えたので参りました』</p>
+                        </div>
+                    </div>
+                    <div class="lovely-item">
+                        <div class="lovely-image"></div>
+                        <div class="lovely-text">
+                            <h3>と子兎はなつかしさうに云ひました。</h3>
+                            <p>『あら、わたしの唄が聞えたの。お前のお家うちは何処どこなの』と訊きますと、『わたしのお家ですか。ほら、お月さまの中にお餅を搗ついてゐるでせう。あれはわたしの伯父さんなんですよ。</p>
+                        </div>
+                    </div>
+                    <div class="lovely-item">
+                        <div class="lovely-image"></div>
+                        <div class="lovely-text">
+                            <h3>わたしのお家も矢つぱりお月さまの中なんですが、</h3>
+                            <p>『兎来いの唄』が聞えたので、どうかしてゆきたいと、やつとのことで此処ここまで参りました。』『お月さまの中まで唄が聞えたの。』『そりやアもう、手にとるやうによく聞えますよ。わたしのお友達は皆な真似てうたつてをりますもの。』</p>
+                        </div>
+                    </div>
+                </div><!-- //lovely-block -->
+            </div><!-- //inner -->
+        </section><!-- //lovely -->
+
+        <!-- info -->
+        <section class="section" id="info">
+            <div class="inner">
+                <div class="section-title">
+                    <h2 class="title">お知らせ</h2>
+                </div>
+                <div class="info-block">
+                    <div class="info-item">
+                        <a href="#">
+                            <div class="info-image">
+                                <div class="category">うさぎ</div>
+                            </div>
+                            <div class="info-text">
+                                <time datetime="2019-03-03">2019年3月3日</time>
+                                <h3>『さうなの』と、つね子さんは大へん感心をしまして、</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="info-item">
+                        <a href="#">
+                            <div class="info-image">
+                                <div class="category">うさぎ</div>
+                            </div>
+                            <div class="info-text">
+                                <time datetime="2019-03-03">2019年3月3日</time>
+                                <h3>赤い鼻緒の草履と赤いかんざしとを買つてやりました。</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="info-item">
+                        <a href="#">
+                            <div class="info-image">
+                                <div class="category">うさぎ</div>
+                            </div>
+                            <div class="info-text">
+                                <time datetime="2019-03-03">2019年3月3日</time>
+                                <h3>子兎は赤い鼻緒の草履をはいて、</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div><!-- //info-block -->
+                <div class="info-btn">
+                    <a href="#" class="btn">もっとみる</a>
+                </div>
+            </div><!-- //inner -->
+        </section><!-- //info -->
+
+        <!-- pickup -->
+        <section class="section" id="pickup">
+            <div class="inner">
+                <div class="section-title">
+                    <h2 class="title">Pickup</h2>
+                </div>
+                <!-- Swiper START -->
+                <div class="swiper-container">
+                    <!-- メイン表示部分 -->
+                    <div class="swiper-wrapper">
+                        <!-- 各スライド -->
+                        <div class="swiper-slide"><a href="#"><img src="./img/bunny！バナー1.png" alt="bunny！バナー"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="./img/bunny！バナー2.png" alt="bunny！バナー"></a></div>
+                        <div class="swiper-slide"><a href="#"><img src="./img/bunny！バナー3png.png" alt="bunny！バナー"></a></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- Swiper END -->
+            </div><!-- //inner -->
+        </section><!-- //pickup -->
+
+        <!-- contact -->
+        <section class="section" id="contact">
+            <div class="inner">
+                <div class="section-title">
+                    <h2 class="title">お問い合わせ</h2>
+                </div>
+                <form class="contact" method="post">
+                    <div class="item">
+                        <label class="pseudo-element" for="name">お名前</label>
+                        <input type="text" id="name" name="your-name">
+                    </div>
+                    <div class="item">
+                        <label class="pseudo-element" for="email">メールアドレス</label>
+                        <input type="email" id="email" name="your-email">
+                    </div>
+                    <div class="item">
+                        <label class="pseudo-element" for="tel">電話番号</label>
+                        <input type="email" id="tel" name="your-tel">
+                    </div>
+                    <div class="item">
+                        <label class="massage" for="massage">お問い合わせ内容</label>
+                        <textarea name="your-massage" id="massage"></textarea>
+                    </div>
+                    <div class="contact-btn">
+                        <a href="#" type="submit" class="btn">送信する</a>
+                    </div>
+                </form>
+            </div><!-- //inner -->
+        </section>
+
+        <!-- floating -->
+        <div class="floating">
+            <a href="#">TOP</a>
+        </div>
+    </main>
+    
+    <!-- フッター -->
+    <footer class="page-footer">
+        <div class="footer-logo"><img src="./img/logo-w.png" alt="Bunny!のロゴ"></div>
+        <nav class="footer-nav">
+            <ul class="nav-item">
+                <li>プライバシーポリシー</li>
+                <li>お問い合わせ</li>
+                <li>特定商取引法に基づく表記</li>
+                <li>サイトマップ</li>
+            </ul>
+        </nav>
+        <div class="copyright">Copyright ©︎ watashiwa saigomade ganbarimashita!</div>
+    </footer>
+    <!-- フッター -->
+
+    <!-- remodal -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/remodal.min.js"></script>
+    <!-- smooth-scroll -->
+    <script src="js/smooth-scroll.polyfills.js"></script>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
+    <!-- Swiper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: 3,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            breakpoints: {
+            // 768px以上の場合
+            768: {
+                slidesPerView: 1,
+                }
+            }
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        jQuery(window).on("scroll", function($) {
+        if (jQuery(this).scrollTop() > 100) {
+            jQuery('.floating').show();
+        } else {
+            jQuery('.floating').hide();
+        }
+        });
+        
+        jQuery('.floating').click(function () {
+        jQuery('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+        });
+    </script>
+</body>
+</html>
